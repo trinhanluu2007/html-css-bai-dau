@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Rowspan & Colspan</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 15px;
+        }
+        tr:nth-child(odd) { background-color: rgba(0, 199, 7, 0.884); }
+        tr:nth-child(even) { background-color: rgb(255, 192, 2); }
+    </style>
+</head>
+<body>
+    <h3>Table Colspan:</h3>
+    <table>
+        <tr>
+            <th colspan="4">Name (4 colspan)</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td style="width: 10px;">Luu</td>
+            <td style="height: 50px;">Tri</td>
+            <td style="height: 50px;">Nhan</td>
+            <td style="height: 50px;">(1)</td>
+            <td>trinhanluu12@gmail.com</td>
+        </tr>
+        <tr>
+            <td style="width: 10px;">Luu</td>
+            <td style="height: 50px;">Tri</td>
+            <td style="height: 50px;">Nhan</td>
+            <td style="height: 50px;">(2)</td>
+            <td>trinhanluu12@gmail.com</td>
+        </tr>
+        <tr>
+            <td style="width: 10px;">Luu</td>
+            <td style="height: 50px;">Tri</td>
+            <td style="height: 50px;">Nhan</td>
+            <td style="height: 50px;">(3)</td>
+            <td>trinhanluu12@gmail.com</td>
+        </tr>
+    </table>
+    <h3>Table Rowspan:</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Luu Tri Nhan 01</td>
+            <td>Luu Tri Nhan 02</td>
+        </tr>
+        <tr>
+            <th rowspan="3">Email (3 rowspan)</th>
+            <td>trinhanluu12@gmail-01.com (1)</td>
+            <td>trinhanluu12@gmail-02.com (1)</td>
+        </tr>
+        <tr>
+            <td>trinhanluu12@gmail-01.com (2)</td>
+            <td>trinhanluu12@gmail-02.com (2)</td>
+        </tr>
+        <tr>
+            <td>trinhanluu12@gmail-01.com (3)</td>
+            <td>trinhanluu12@gmail-02.com (3)</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>20</td>
+            <td>2007</td>
+        </tr>
+    </table>
+</body>
+</html>
