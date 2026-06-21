@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+</head>
+<body>
+    <h3>Danh sach khong sap xep:</h3>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+
+    <hr>
+    <h3>Danh sach co sap xep:</h3>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ol>
+
+    <hr>
+    <h3>Danh sach dang mo ta:</h3>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- Pure black</dd>
+        <dd>- Milk</dd>
+        <dd>- Robusta</dd>
+        <dd>- Arabica</dd>
+
+        <dt>Tea</dt>
+        <dd>- Shan Tuyet</dd>
+        <dd>- Lotus</dd>
+    </dl>
+
+    <hr>
+    <hr>
+    <h3>Nhung danh sach long nhau - Nested Lists</h3>
+    <h4>Nested Lists > Danh sach khong sap xep:</h4>
+    <ul>
+        <li>Coffee
+            <ul>
+                <li>Black</li>
+                <li>Milk</li>
+            </ul>
+        </li>
+        <li>Tea
+            <ul>
+                <li>Shan Tuyet</li>
+                <li>Lotus</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    <h4>Nested Lists > Danh sach co sap xep:</h4>
+    <ol>
+        <li>Coffee</li>
+            <ol>
+                <li>Black</li>
+                <li>Milk</li>
+            </ol>
+        <li>Tea</li>
+            <ol>
+                <li>Shan Tuyet</li>
+                <li>Lotus</li>
+            </ol>
+    </ol>
+
+    <hr>
+    <hr>
+    <h3>Styled Lists - Tao kieu co ban cho danh sach:</h3>
+    <h4>Styled Lists > Danh sach khong sap xep:</h4>
+    <ul style="list-style-type: square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+    <hr>
+    <h4>Styled Lists > Danh sach co sap xep:</h4>
+    <ol type="1" start="5" reversed="true">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+        <li>Beer</li>
+        <li>Milk</li>
+    </ol>
+</body>
+</html>
