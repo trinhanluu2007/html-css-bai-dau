@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & Javascript</title>
+    <script src="javascript.js" async></script> <!--(Cach 3)-->
+</head>
+<body>
+    <!--Cach 1: Su dung JS truc tiep trong the HTML:-->
+    <button type='button' onclick="alert('Luu Tri Nhan')">Show Alert</button>
+
+    <!--Cach 2: Su dung JS trong cap the <script>-->
+    <div id='test'></div>
+    <script>
+        document.getElementById('test').innerHTML = 'Luu Tri Nhan'
+    </script>
+
+    <button type='button' id='test_3'>test 3</button>
+    <div id='test_2'></div>
+    <!--Cach 3: Su dung JS trong mot file rieng va nhung vao trang HTML (Cach duoc su dung nhieu nhat trong cong viec (di lam))-->
+</body>
+</html>
