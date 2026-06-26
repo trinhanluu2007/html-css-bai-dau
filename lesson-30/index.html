@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Textarea, Select</title>
+</head>
+<body>
+    <form>
+        <!-- Textarea dung de nhap noi dung dai nhu mot doan van ban...vv -->
+        <!-- Select dung de chon mot (hoac nhieu) gia tri tu danh sach cho truoc -->
+        <label>Your feedback:</label><br>
+        <textarea name="feedback" rows="5" cols="40" placeholder="Enter your feedback here..."></textarea>
+        <br><br>
+
+        <!-- multiple dung de dua ra nguyen danh sach, khong co multiple thi co mui ten -->
+        <!-- giu ctrl de chon nhieu -->
+        <label>Rate:</label><br>
+        <select name="satisfaction" multiple>
+            <option value="very_satisfied">Very satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unsatisfied</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Send feedback</button>
+    </form>
+</body>
+</html>
