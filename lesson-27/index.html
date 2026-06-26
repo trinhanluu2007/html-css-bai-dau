@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <form 
+    action="https://www.google.com/search" 
+    method="get" 
+    autocomplete="on" 
+    name="search-form" 
+    target="_blank">
+        <!-- BAT BUOC CO name=q -->
+        <!-- target=_blank nhay sang tab moi -->
+        <!-- kieu gui (GET/POST) Sau nay lam chuan RESTful API thi them PUT/PATCH/DELETE -->
+         <!-- nen co NAME moi search-form de khong bi CONFLICT -->
+        <label for="search">Keyword:</label><br>
+        <input type="text" id="search" name="q" placeholder="Search Google...">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
