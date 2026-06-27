@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background: lightgray;
+            /* box-sizing: content-box; (gia tri default -> co hay khong cung 200x100) => Tro thanh 260x160 */
+            box-sizing: border-box;
+        }
+        .p-30 { padding: 30px; }
+        .border-10-solid-green{
+            border: 10px solid green;
+        }
+        .m-20 { margin: 20px; }
+    </style>
+</head>
+<body>
+    <!-- 
+    + padding: khoảng cách bên trong từ content đến cạnh viền của phần tử chứa content.
+
+    + border: đường viền của phần tử chứa content.
+
+    + margin: khoảng cách ngoài so với phần tử chứa content.
+
+    Một thuộc tính khai báo CSS quan trọng: box-sizing
+    + content-box: giá trị default, lúc này width và height của
+    phần tử thì sẽ chỉ áp dụng cho phần content. Còn kích
+    thước của border và padding sẽ được cộng thêm bên ngoài
+    (Cách này khó kiểm soát layout)
+
+    + border-box: Ngược lại, lúc này width và height của phần tử
+    sẽ bao gồm cả kích thước của content + border + padding
+    (Nên dùng, dễ kiểm soát layout hơn)
+    (Ví dụ thực tiễn thì xem video mình sẽ demo nhé) 
+    -->
+
+    <div class="box p-30">Padding</div> <!-- Tai sao luc hover vao lai la 260x160 ??? => Do co cong them cua padding (60 px) => GIAI PHAP: Su dung box-sizing: border-box -->
+    <div class="box border-10-solid-green">Border</div>
+    <div class="box m-20">Margin</div>
+</body>
+</html>
