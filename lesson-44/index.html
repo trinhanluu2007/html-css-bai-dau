@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        h-20 {
+            height: 20px;
+        }
+
+        .static {
+            /* Position - Static: Đây là kiểu mặc định, phần tử giữ nguyên vị trí ban đầu và sẽ không sử dụng được các thuộc tính top-left-bottom-right */
+            width: 250px;
+            height: 100px;
+            background: lightblue;
+            position: static;
+            top: 20px;
+            left: 20px;
+        }
+
+        .relative {
+            /* Position - Relative: Phần tử vẫn giữ nguyên vị trí ban đầu nhưng có thể sử dụng được các thuộc tính top-left-bottom-right */
+            width: 250px;
+            height: 100px;
+            background: lightgreen;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute {
+            /* Position - Absolute: Phần tử không còn giữ nguyên vị trí ban đầu nữa. Thay vào đó vị trí sẽ được tính toán tương đối với phần tử cha gần nhất có position khác static. Có thể sử dụng được các thuộc tính top-left-bottom-right. (Nếu không có phần tử cha phù hợp, sẽ được tính với body) */
+            width: 150px;
+            height: 50px;
+            background: lightcoral;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed {
+            /* Position - Fixed: Phần tử sẽ thoát hẳn khỏi flow của trang web, lúc này vị trí sẽ cố định so với màn hình của trình duyệt. Và không bị cuộn theo nội dung khi cuộn trang. */
+            width: 150px;
+            height: 50px;
+            background: lightseagreen;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        .h-1500 {
+            height: 1500px;
+        }
+
+        .sticky {
+            /* Position - Sticky: Ban đầu là relative, Khi cuộn trang đến một ngưỡng là sẽ “dính” lại, như fixed. Rất thích hợp làm Menu dạng Sticky. */
+            width: 250px;
+            height: 80px;
+            background: lightsalmon;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="static">
+        Static Content
+    </div>
+    <div class="h-20">&nbsp;</div>
+    
+    <div class="relative">
+        Relative Content 01
+    </div>
+    <div class="h-20">&nbsp;</div>
+
+    <div class="relative">
+        Relative Content 02
+        <div class="absolute">
+            Absolute Content 01 (follow relative)
+        </div>
+    </div>
+    <div class="absolute">
+    Absolute Content 02 (follow body)
+    </div>
+    <div class="h-20">&nbsp;</div>
+
+    <div class="fixed">
+        Fixed Content (follow viewport)
+    </div>
+
+    <div class="sticky">
+        Sticky Content
+    </div>
+    <div class="h-1500">&nbsp;</div>
+</body>
+</html>
