@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop First</title>
+
+    <!-- Desktop-First (Ưu tiên cho Máy tính trước): Nghĩa là chúng ta sẽ code giao diện hoàn chỉnh cho màn hình lớn (PC/Laptop) trước. Sau đó dùng các điều kiện CSS media max-width breakpoints để "thu nhỏ" và update lại giao diện khi hiển thị trên màn hình (Điện thoại/Tablet) nhỏ hơn.
+    => “Tùy dự án. Và cách này phù hợp cho người mới bắt đầu để tránh bị ngợp bố cục.” -->
+
+
+    <!-- Responsive: Một trang web hiện đại bắt buộc phải tự động co giãn và thay đổi bố cục mượt mà trên mọi thiết bị từ PC, Máy tính bảng cho đến Điện thoại. Kỹ thuật CSS để làm điều đó được gọi là “Responsive Web Design”.
+
+    Media Queries: là một tính năng của CSS cho phép chúng ta áp dụng các đoạn code CSS khác nhau dựa trên kích thước màn hình (hoặc loại thiết bị) đang hiển thị trang web 
+
+    Lưu ý quan trọng: Để Media Queries hoạt động được trên các thiết bị mobile thật thì trong file HTML phải có thẻ Meta Viewport (nhớ lại bài học số 21. HTML Head và Meta) -->
+
+    <!-- Breakpoints: Trong thực tế, chúng không cần phải xử lý Fix cứng kích thước cho từng dòng điện thoại như: iPhone, Samsung, iPad…, mà chỉ cần nhớ bộ khung Breakpoints chuẩn chia theo nhóm thiết bị của các CSS Framework lớn như: Bootstrap, Tailwind CSS (Shadcn/ui), Material UI, Ant Design… -->
+
+    <!-- TailwindCSS Breakpoints: https://v1.tailwindcss.com/docs/breakpoints -->
+
+    <style>
+        /* 1. CSS ban đầu cho PC (Màn hình lớn) */
+        .container-desktop {
+            display: flex; gap: 20px;
+        }
+        .card-item {
+            flex: 1;
+            background-color: #2ecc71; /* Màu xanh lá */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 2. CSS khi co về Mobile (Từ 768px trở xuống) */
+        @media (max-width: 768px) {
+            .container-desktop {
+                flex-direction: column; /* Từ hàng ngang thành hàng dọc */
+            }
+            .card-item {
+                background-color: #e74c3c; /* Màu đỏ */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-desktop">
+        <div class="card-item">Card 1</div>
+        <div class="card-item">Card 2</div>
+        <div class="card-item">Card 3</div>
+    </div>
+
+</body>
+</html>
