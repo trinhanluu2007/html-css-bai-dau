@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <!-- Overflow: Sử dụng để xử lý trường hợp nội dung của phần tử bị tràn ra khỏi phần hiển thị. Trường hợp bị tràn này gặp rất nhiều trong thực tế. -->
+    <style>
+        .box-overflow {
+            width: 200px;
+            height: 100px;
+            background-color: lightsalmon;
+            padding: 10px;
+
+            /* Giá trị mặc định, bị tràn */
+            overflow: visible;
+
+            /* Tự động cắt bớt phần bị tràn ra và ẩn đi */
+            overflow: hidden;
+
+            /* Tự động thêm thanh cuộn khi nội dung bị tràn */
+            overflow: auto;
+
+            /* Luôn hiển thị thanh cuộn dù nội dung có tràn hay không */
+            /* Tuy nhiên tùy vào OS, ví dụ MacOS sẽ ẩn mặc định cho đẹp */
+            /* Appearance > Show scroll bars” */
+            overflow: scroll;
+
+            /* Quản lý ẩn hiện riêng cho thanh cuộn ngang hoặc dọc */
+            overflow-y: scroll; /* Thanh cuon doc */
+            overflow-x: scroll; /* Thanh cuon ngang */
+            white-space: nowrap; /* Khong xuong dong */
+        }
+    </style>
+</head>
+<body>
+    <div class="box-overflow">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+    </div>
+</body>
+</html>
