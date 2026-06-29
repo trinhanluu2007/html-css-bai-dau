@@ -1,0 +1,244 @@
+/* Luu Tri Nhan - Lap trinh vien */
+
+/* Main Content Section */
+
+.main-content {
+  display: flex;
+  gap: 42px; /* gap: 42px; la gap giua Left Column va Right Column */
+}
+
+/* Left Column */
+.col-left {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* -- Ben duoi la de TEST -- */
+  /* flex-shrink: 0; */ /* Bo sung kien thuc: flex-shrink: 0; Neu muon ep cot khong bao gio duoc co nho lai duoi chieu rong cua no: 400px */
+  /* border: 1px solid blue;
+  height: 500px; */
+}
+
+.section-left {
+  position: relative;
+}
+
+.ribbon-left {
+  padding: 10px 20px 10px 40px;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  margin-left: -20px;
+  margin-bottom: 10px;
+  border-radius: 0 var(--border-radius-sm) /* 6px */ var(--border-radius-sm)
+    /* 6px */ 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.ribbon-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  filter: brightness(
+    0.7
+  ); /* Giam do sang (brightness) tu 1 xuong 0.7 */ /* Lam toi mau de tao hieu ung dang nep gap */
+}
+
+.ribbon-left::after {
+  content: "";
+  position: absolute;
+  right: -13px;
+  top: 1px;
+  border-width: 20px 0 20px 15px;
+  border-style: solid;
+}
+
+/* Ribbon Color */
+/* Green */
+.bg-green {
+  background-color: var(--color-green);
+}
+.bg-green::before {
+  border-color: var(--color-green) transparent transparent transparent;
+}
+.bg-green::after {
+  border-color: transparent transparent transparent var(--color-green);
+}
+
+/* Teal */
+.bg-dark-teal {
+  background-color: var(--color-dark-teal);
+}
+.bg-dark-teal::before {
+  border-color: var(--color-dark-teal) transparent transparent transparent;
+}
+.bg-dark-teal::after {
+  border-color: transparent transparent transparent var(--color-dark-teal);
+}
+
+/* Orange */
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.bg-orange::before {
+  border-color: var(--color-orange) transparent transparent transparent;
+}
+.bg-orange::after {
+  border-color: transparent transparent transparent var(--color-orange);
+}
+
+/* Red */
+.bg-red {
+  background-color: var(--color-red);
+}
+.bg-red::before {
+  border-color: var(--color-red) transparent transparent transparent;
+}
+.bg-red::after {
+  border-color: transparent transparent transparent var(--color-red);
+}
+
+.paper-box {
+  background: var(--paper-bg);
+  padding: 24px 25px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+/* Quan trong, doan nay de xu ly chu nam tren dung dong cua paper-box */
+.paper-box p,
+.paper-box li {
+  line-height: 24px; /* line-height PHAI bang dung kich thuoc chu ky cua gradient (24px) */
+  margin: 0; /* Reset margin ve 0 de khong bi lech khi sang doan moi */
+  transform: translateY(
+    3px
+  ); /* Dich chu di xuong 3 px de sat duong ke ben duoi (dung transform de tranh anh huong den paper-box tong the) */
+}
+
+.paper-box ul {
+  list-style: none;
+}
+
+.paper-box strong {
+  font-weight: 700;
+}
+
+.username {
+  text-transform: uppercase;
+}
+
+.education-box {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+.education-title a {
+  font-weight: bold;
+}
+
+.education-icon {
+  color: var(--color-red);
+  font-size: 14px;
+}
+
+.youtube-icon {
+  color: var(--color-red);
+}
+
+.instagram-text {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.instagram-icon {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+
+.interests-grid {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+/* Hieu ung phong to nhe khi di chuot vao phan tu */
+.interest-item {
+  transition: var(--transition-scale);
+}
+.interest-item:hover {
+  transform: scale(1.2);
+}
+
+/* Màu sắc riêng cho từng sở thích - tùy các bạn tự do custom */
+.interest-item.icon-tv {
+  color: var(--icon-tv);
+} /* cam */
+.interest-item.icon-globe-americas {
+  color: var(--icon-globe);
+} /* teal */
+.interest-item.icon-palette {
+  color: var(--icon-palette);
+} /* hồng */
+.interest-item.icon-music {
+  color: var(--icon-music);
+} /* tím */
+.interest-item.icon-book {
+  color: var(--icon-book);
+} /* xanh lá */
+.interest-item.icon-camera {
+  color: var(--icon-camera);
+} /* chàm */
+.interest-item.icon-dumbbell {
+  color: var(--icon-dumbbell);
+} /* cam đậm */
+.interest-item.icon-coffee {
+  color: var(--icon-coffee);
+} /* nâu */
+.interest-item.icon-code {
+  color: var(--icon-code);
+} /* ngọc */
+.interest-item.icon-plane {
+  color: var(--icon-plane);
+} /* xanh dương */
+.interest-item.icon-futbol {
+  color: var(--icon-futbol);
+} /* xanh lá tươi */
+.interest-item.icon-headphones {
+  color: var(--icon-headphones);
+} /* tím đậm */
+.interest-item.icon-utensils {
+  color: var(--icon-utensils);
+} /* vàng cam */
+
+/* Right Column */
+.col-right {
+  flex-grow: 1; /* flex-grow: 1; Tu dong chiem het toan bo khong gian con lai cua main-content */
+  border: 1px solid blue;
+  height: 100vh;
+  position: relative;
+  padding-left: 30px;
+}
