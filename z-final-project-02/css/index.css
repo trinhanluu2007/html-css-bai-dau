@@ -1,0 +1,14 @@
+/* Luu Tri Nhan - Lap trinh web */
+
+/* Diem cuoi de gan CSS vao HTML */
+
+/* Dau tien: Import cac bien CSS */
+@import url("variables.css");
+
+/* Import lan luot tu tren xuong duoi. Code lan luot theo thu tu #1 -> #4 */
+@import url("general.css"); /* #1 */
+@import url("header.css"); /* #2 */
+@import url("main-content.css"); /* #3 */
+
+/* Cuoi cung (QUAN TRONG): Responsive import cuoi cung. De class cua cac man hinh nho se duoc uu tien hon cac file o tren */
+@import url("responsive.css"); /* #4 */

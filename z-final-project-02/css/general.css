@@ -1,0 +1,44 @@
+/* Luu Tri Nhan - Lap trinh web */
+
+/* File General: Define nhung CSS dac thu chung cho toan bo du an */
+
+/* *{...} => Ap dung cac thuoc tinh nam ben trong dau ngoac nhon nay cho moi phan tu HTML xuat hien tren trang web (body, div, p, span, h1, ...) */
+* {
+  box-sizing: border-box; /* Clear CSS */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ap dung cho body */
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  line-height: 1.4; /* line-height: Khoang khong gian theo chieu doc giua cac dong van ban */
+  font-size: var(--fs-body);
+  padding: 40px 20px; /* Cach Top-Bottom 40px va cach Left-Right 20px */
+}
+
+.resume-container {
+  /* Nen set "chieu rong toi da" cho khung ngoai cung de tranh bi tran tren man hinh qua to, sau do "can giua moi noi dung" */
+  max-width: 1280px; /* "chieu rong toi da" */
+  margin: 0 auto; /* "can giua toan bo noi dung resume-container" */
+  position: relative;
+  /* border: 1px solid red;
+  height: 100vh; */
+}
+
+a {
+  color: inherit; /* Lay mot color ke thua tu phan tu cha cua no (bubble-left) */
+  text-decoration: none; /* Khong cho dau gach chan duoi the <a> */
+}
+
+a:hover {
+  text-decoration: underline; /* Chi hien thi dau gach chan KHI di chuot vao de biet la link CLICK DUOC */
+}
+
+a.colorful-link {
+  /* Doi voi nhung the <a> can color dong bo theo branding cua du an, thi gan mot cai class cho no cu the la colorful-link */
+  color: var(--color-teal);
+  font-weight: 500px;
+}

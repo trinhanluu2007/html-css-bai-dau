@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuuTriNhan - Creative Resume</title>
+    <link rel="icon" href="assets/ico/icons8-nano-32.png">
+
+    <!-- 
+        Chúng ta sẽ có những đầu công việc lần lượt như sau:
+        1. Init dự án
+        2. Cấu trúc thư mục, files…
+        3. Chuẩn bị các bộ icons: Font Awesome, Devicon
+        4. Chuẩn bị sẵn fonts từ Google Fonts
+        5. Chuẩn bị sẵn các biến CSS Variables (Link bên dưới: thư mục số 23)
+        https://github.com/trungquandev/trungquandev-public-utilities-algorithms
+        6. Dựng layout dự án tổng thể ban đầu
+        7. Push code lên GitHub
+    -->
+
+    <!--------------------------------------------------------------------->
+
+    <!-- Su dung 2 bo Icon pho bien la Font Awesome va Devicon (cdn) -->
+    <!--
+        + rel="stylesheet": Cho trinh duyet biet day la mot file thiet ke giao dien CSS.
+
+        + integrity: Mot ma khoa bao mat. Trinh duyet dua vao ma nay de kiem tra xem file tai tu CDN ve co bi ai sua doi, chen ma doc hay khong.
+
+        + crossorigin="anonymous": Yeu cau trinh duyet lay du lieu ve mot cach an danh, nghia la khong mang theo Cookie, mat khau hay thong tin gi khac cua nguoi dung. Dai loai la de bao ve thong tin cho ban.
+
+        + referrerpolicy="no-referrer": Khong cho trinh duyet tiet lo voi may chu tai nguyen la ban dang dung tu trang web nao trong luc tai file du lieu ve.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css" integrity="sha512-6/05LVs+grXBAu5XzdiMFB64yCVF9FL70zWrTKcaTEKygrO7fC5LqfL/SKPpuRpimL2aE0D7Hw/NoED+7+7/VQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Lay fonts tu Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- File CSS chinh cua chung ta: index.css -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="resume-container"> <!--Khung TO NHAT cua du an, div TONG-->
+
+        <header class="header">
+            <!-- Bubble Left -->
+            <div class="bubble-left">
+                <div class="hello-text">hello there,</div>
+                <div class="contact-info">
+                    <p>
+                        <i class="fas fa-mobile-alt"></i>
+                        <a href="tel:0909817513">0909817513</a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/6t5jECNk7JLWmbhN7" target="_blank" rel="noopener noreferrer">TP.HCM, Viet Nam</a>
+                        <!-- rel="noopener noreferrer": Voi external link target="_blank", thi cai rel nay se ngan chan lo hong bao mat lien quan den tab lua dao (window.opener), dong thoi an thong tin nguon (Referrer) de bao mat cho trang web cua minh. -->
+                    </p>
+
+                    <p>
+                        <i class="fas fa-globe"></i>
+                        <a href="https://trungquandev.com">https://trungquandev.com</a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:trinhanluu12@gmail.com">trinhanluu12@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="avatar">
+                <img src="assets\img\ảnh xin việc.png" alt="Luu Tri Nhan">
+            </div>
+
+            <!-- Bubble Right -->
+            <div class="bubble-right">
+                <div class="im-text">i'm Luu Tri Nhan</div>
+                <div class="first-job">Developer</div>
+                <div class="second-job">Mentor</div>
+                <div class="third-job">Software Engineer</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="col-left"></div>
+            <div class="col-right"></div>
+        </main>
+
+        <!-- <footer class="footer"></footer> (KHONG CO footer do du an khong co chan trang) -->
+    </div>
+</body>
+</html>
