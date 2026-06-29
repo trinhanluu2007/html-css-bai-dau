@@ -24,6 +24,21 @@ body {
   max-width: 1280px; /* "chieu rong toi da" */
   margin: 0 auto; /* "can giua toan bo noi dung resume-container" */
   position: relative;
-  border: 1px solid red;
-  height: 100vh;
+  /* border: 1px solid red;
+  height: 100vh; */
+}
+
+a {
+  color: inherit; /* Lay mot color ke thua tu phan tu cha cua no (bubble-left) */
+  text-decoration: none; /* Khong cho dau gach chan duoi the <a> */
+}
+
+a:hover {
+  text-decoration: underline; /* Chi hien thi dau gach chan KHI di chuot vao de biet la link CLICK DUOC */
+}
+
+a.colorful-link {
+  /* Doi voi nhung the <a> can color dong bo theo branding cua du an, thi gan mot cai class cho no cu the la colorful-link */
+  color: var(--color-teal);
+  font-weight: 500px;
 }
