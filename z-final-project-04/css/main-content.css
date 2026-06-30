@@ -447,3 +447,71 @@
 .ability-icon.icon-refactor {
   color: var(--icon-refactor);
 }
+
+/* Experience Section */
+.experience-grid {
+  background-color: var(--bg-white-soft);
+  padding: 20px;
+  margin: 10px 0 0 15px;
+  border-radius: var(--border-radius-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  box-shadow: var(--shadow-box);
+}
+
+.experience-item {
+  margin-bottom: 5px;
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-company {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.experience-company a {
+  font-weight: bold;
+}
+
+.experience-title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.experience-location,
+.experience-date {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.the-end-box {
+  background-color: var(--bg-white-soft);
+  padding: 20px;
+  margin: 10px 0 0 15px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-box);
+}
+
+/* nth-child(n): Hieu don gian la "Dua con thu n" */
+/* Dua con dau long cua .the-end-content - va no phai la the <p> */
+/* .the-end-content p:nth-child(1) {} */
+.the-end-content p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Dua con thu hai cua .the-end-content - va no phai la the <p> */
+.the-end-content p:nth-child(2) {
+  font-size: 15px;
+  font-style: italic; /* Chu nghieng kieu cau trich dan */
+  color: var(--color-orange);
+  font-weight: 600;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-orange); /* Dung border-left de danh dau kieu cau trich dan */
+}
+
+/* .the-end-content p:last-child {} */
