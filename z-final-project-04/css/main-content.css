@@ -9,7 +9,7 @@
 
 /* Left Column */
 .col-left {
-  width: 400px;
+  width: 375px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -237,8 +237,105 @@
 /* Right Column */
 .col-right {
   flex-grow: 1; /* flex-grow: 1; Tu dong chiem het toan bo khong gian con lai cua main-content */
-  border: 1px solid blue;
-  height: 100vh;
   position: relative;
   padding-left: 30px;
+  /* border: 1px solid blue;
+  height: 100vh; */
+}
+
+/* Timeline line */
+.col-right::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 0;
+  width: 0;
+  border-left: 4px dotted var(--color-white);
+}
+
+.section-right {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Timeline dot */
+.section-right::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 2; /* z-index: 2; De tang thu hang hien thi */
+}
+
+.dot-red::before {
+  background-color: var(--color-red);
+}
+
+.dot-green::before {
+  background-color: var(--color-green);
+}
+
+.dot-teal::before {
+  background-color: var(--color-teal);
+}
+
+.dot-orange::before {
+  background-color: var(--color-orange);
+}
+
+.tag-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.tag-title::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 12px 12px 12px 0;
+  border-style: solid;
+}
+
+.tag-red {
+  background-color: var(--color-red);
+}
+.tag-red::before {
+  border-color: transparent var(--color-red) transparent transparent;
+}
+
+.tag-green {
+  background-color: var(--color-green);
+}
+.tag-green::before {
+  border-color: transparent var(--color-green) transparent transparent;
+}
+
+.tag-teal {
+  background-color: var(--color-teal);
+}
+.tag-teal::before {
+  border-color: transparent var(--color-teal) transparent transparent;
+}
+
+.tag-orange {
+  background-color: var(--color-orange);
+}
+.tag-orange::before {
+  border-color: transparent var(--color-orange) transparent transparent;
 }
