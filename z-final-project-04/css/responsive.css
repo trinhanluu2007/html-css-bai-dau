@@ -1,0 +1,225 @@
+/* Luu Tri Nhan - Lap trinh web */
+
+/*
+    RESPONSIVE STYLES (DESKTOP-FIRST)
+    Toi uu hoa layout tong the va chi tiet toan bo phan tu con ben trong
+*/
+
+/* 2xl: 1536px (Áp dụng cho màn hình desktop nhỏ hơn 1536px) */
+@media (max-width: 1536px) {
+  /* Khong can lam gi */
+}
+
+/* xl: 1280px (Áp dụng cho màn hình desktop nhỏ hơn 1280px) */
+@media (max-width: 1280px) {
+  .resume-container {
+    padding: 0 24px; /* Giu khoang cach an toan cho container khong dinh sat le */
+  }
+}
+
+/* lg: 1024px (Màn hình Laptop nhỏ / Máy tính bảng xoay ngang) */
+@media (max-width: 1024px) {
+  .im-text {
+    font-size: 40px;
+    margin-bottom: -10px;
+  }
+
+  .first-job {
+    font-size: 46px;
+  }
+
+  .second-job {
+    font-size: 24px;
+  }
+
+  .third-job {
+    font-size: 18px;
+  }
+
+  .hello-text {
+    font-size: 40px;
+  }
+
+  .bubble-right {
+    padding: 35px 50px;
+    min-width: 360px;
+  }
+
+  .skills-grid,
+  .abilities-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* md: 768px (Màn hình Máy tính bảng / iPad dọc) */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 0;
+  }
+
+  /* 1. HEADER REFACTOR: Chuyen toan bo cum Header ve hang doc */
+  .header {
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 45px;
+  }
+
+  /* Dieu chinh kich thuoc va hinh dang cac phan tu con ben trong Header */
+  .bubble-left,
+  .bubble-right {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 24px; /* Tra lai bo goc can doi thay vi meo elip */
+    text-align: center;
+  }
+
+  /* An cac nep gap mui ten nhon (after/before) vi layout doc khong can chi huong nua */
+  .bubble-left::after,
+  .bubble-right::before {
+    display: none;
+  }
+
+  /* Can giua cac phan tu con ben trong bubble-left (Sdt, email, map, ...) */
+  .contact-info p {
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .im-text {
+    margin-bottom: 0;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 220px;
+    box-shadow: 0 15px 0 -3px var(--color-teal);
+  }
+
+  /* 2. MAIN CONTENT REFACTOR: Chuyen 2 cot lon Trai - Phai thanh 1 hang doc */
+  .main-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* 3. XU LY CHI TIET COT TRAI (COL-LEFT) */
+  /* Phang hoa nep gap ruy bang trai (Ribbon) tranh loi hien thi lo lung ngoai man hinh */
+  .ribbon-left {
+    border-radius: var(--border-radius-sm);
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  .ribbon-left::before {
+    display: none;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(7, 1fr);
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* 4. XU LY CHI TIET COT PHAI (COL-RIGHT) */
+  .section-right {
+    padding-left: 25px;
+  }
+
+  /* Can lai vi tri cua cac cham tron mau (Dot) de chuan len duong ray Dotted */
+  .section-right::before {
+    left: -5px;
+  }
+
+  /* Cau truc lai luoi cua cac phan tu con phia cot phai */
+  .skills-grid,
+  .abilities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* sm: 640px (Màn hình Điện thoại di động lớn) */
+@media (max-width: 640px) {
+  .im-text {
+    font-size: 32px;
+  }
+
+  .first-job {
+    font-size: 38px;
+  }
+
+  .second-job {
+    font-size: 20px;
+  }
+
+  .third-job {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .skills-grid,
+  .abilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr; /* grid-template-columns: repeat(1, 1fr); */
+    gap: 16px;
+    margin: 0;
+  }
+
+  .the-end-box {
+    margin: 0;
+  }
+}
+
+/* xs: 480px (Màn hình Điện thoại di động nhỏ - Tối ưu nốt các chi tiết cuối cùng) */
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 0 12px;
+  }
+
+  .paper-box {
+    padding: 20px 16px;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skill-icon {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .ability-icon {
+    font-size: 28px;
+  }
+
+  .experience-company {
+    font-size: 14px;
+  }
+
+  .experience-title {
+    font-size: 12px;
+  }
+}
